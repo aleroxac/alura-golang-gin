@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "alura-golang-gin",
+    "dateExported": "2023-05-21T21:47:32.252Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "eadd21ce-8ef2-43c8-8228-dcf3b1a3b1ba",
+            "colId": "60abf38d-1b51-40c2-b315-9c6e687a0270",
+            "containerId": "",
+            "name": "create",
+            "url": "http://localhost:8000/api/v1/skills",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-21T20:51:10.149Z",
+            "modified": "2023-05-21T20:52:10.159Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"python\",\n  \"description\": \"Mastery python programming language\",\n  \"group\": \"programming\",\n  \"category\": \"language\",\n  \"purpose\": \"general\",\n  \"priority\": 2,\n  \"level\": 7\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "33ba88eb-287e-402d-bd96-1ef1d615c214",
+            "colId": "60abf38d-1b51-40c2-b315-9c6e687a0270",
+            "containerId": "",
+            "name": "list",
+            "url": "http://localhost:8000/api/v1/skills",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-21T20:51:21.761Z",
+            "modified": "2023-05-21T21:34:00.491Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "33dc8499-1a2d-44e5-8925-8b2083f326df",
+            "colId": "60abf38d-1b51-40c2-b315-9c6e687a0270",
+            "containerId": "",
+            "name": "getByName",
+            "url": "http://localhost:8000/api/v1/skills/golang",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-21T20:51:45.560Z",
+            "modified": "2023-05-21T21:47:13.309Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "91ca0241-5e2c-4565-8771-51900ce9b4e2",
+            "colId": "60abf38d-1b51-40c2-b315-9c6e687a0270",
+            "containerId": "",
+            "name": "update",
+            "url": "http://localhost:8000/api/v1/skills/python",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-05-21T20:56:30.511Z",
+            "modified": "2023-05-21T21:44:29.533Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"priority\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "da5c12e2-010c-462c-9b67-f1cdd42c47dd",
+            "colId": "60abf38d-1b51-40c2-b315-9c6e687a0270",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:8000/api/v1/skills/python",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-21T20:58:08.219Z",
+            "modified": "2023-05-21T21:34:27.526Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
