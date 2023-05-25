@@ -47,6 +47,13 @@ func Create(c *gin.Context) {
 		return
 	}
 
+	if err := models.ValidateSkillData(&new_skill); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+
 	database.DB.Create(&new_skill)
 	c.JSON(http.StatusCreated, new_skill)
 }
@@ -64,6 +71,13 @@ func Update(c *gin.Context) {
 	}
 
 	if err := c.ShouldBindJSON(&updated_skill); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+
+	if err := models.ValidateSkillData(&updated_skill); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": err.Error(),
 		})
