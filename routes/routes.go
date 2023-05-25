@@ -7,6 +7,8 @@ import (
 
 func HandleRequests() {
 	router := gin.Default()
+	router.SetTrustedProxies(nil)
+
 	router.GET("/api/v1/healthz", controllers.Healthcheck)
 	router.GET("/api/v1/skills", controllers.List)
 	router.GET("/api/v1/skills/:name", controllers.GetByName)
